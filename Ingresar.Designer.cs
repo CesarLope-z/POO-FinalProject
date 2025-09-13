@@ -34,6 +34,7 @@
             label2 = new Label();
             button1 = new Button();
             button2 = new Button();
+            label3 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -90,11 +91,21 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(136, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Ingresar tus credenciales";
+            // 
             // Ingresar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(293, 341);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -102,7 +113,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Ingresar";
-            Text = "Ingresar";
+            Text = "Ingresa";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,5 +126,6 @@
         private Label label2;
         private Button button1;
         private Button button2;
+        private Label label3;
     }
 }
