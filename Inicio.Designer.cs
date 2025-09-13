@@ -64,12 +64,13 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ActiveCaption;
             button1.Location = new Point(81, 106);
             button1.Name = "button1";
             button1.Size = new Size(175, 47);
             button1.TabIndex = 5;
             button1.Text = "Crear Cita Medica";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // btnVolverP

@@ -86,21 +86,23 @@
             // 
             // button1
             // 
-            button1.Location = new Point(126, 197);
+            button1.BackColor = SystemColors.MenuHighlight;
+            button1.Location = new Point(126, 174);
             button1.Name = "button1";
             button1.Size = new Size(211, 56);
             button1.TabIndex = 7;
             button1.Text = "Buscar Expediente medico de persona";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.Location = new Point(126, 104);
+            button2.BackColor = SystemColors.MenuHighlight;
+            button2.Location = new Point(126, 81);
             button2.Name = "button2";
             button2.Size = new Size(211, 56);
             button2.TabIndex = 8;
             button2.Text = "Administrar cita";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // btnVolverM
             // 
