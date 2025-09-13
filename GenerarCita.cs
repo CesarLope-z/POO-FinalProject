@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace POO_Catedra
 {
-    public partial class Administrador : Form
+    public partial class GenerarCita : Form
     {
-        public Administrador()
+        public GenerarCita()
         {
             InitializeComponent();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Administrador");
-            ingresar.Show();
+            Inicio inicio = new Inicio();
+            inicio.Show();
             this.Hide();
         }
     }

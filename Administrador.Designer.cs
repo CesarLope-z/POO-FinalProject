@@ -33,6 +33,8 @@
             button2 = new Button();
             button1 = new Button();
             label1 = new Label();
+            btnVolver = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(43, 269);
+            button3.Location = new Point(43, 202);
             button3.Name = "button3";
             button3.Size = new Size(136, 40);
             button3.TabIndex = 7;
@@ -55,7 +57,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(43, 196);
+            button2.Location = new Point(43, 142);
             button2.Name = "button2";
             button2.Size = new Size(136, 43);
             button2.TabIndex = 6;
@@ -64,7 +66,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(43, 129);
+            button1.Location = new Point(43, 82);
             button1.Name = "button1";
             button1.Size = new Size(136, 43);
             button1.TabIndex = 5;
@@ -80,11 +82,32 @@
             label1.TabIndex = 9;
             label1.Text = "Bienvenido, Administrador";
             // 
+            // btnVolver
+            // 
+            btnVolver.Location = new Point(43, 415);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(136, 23);
+            btnVolver.TabIndex = 10;
+            btnVolver.Text = "Cerrar Sesión";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(43, 298);
+            button4.Name = "button4";
+            button4.Size = new Size(136, 47);
+            button4.TabIndex = 11;
+            button4.Text = "Administrar Cita Medica";
+            button4.UseVisualStyleBackColor = true;
+            // 
             // Administrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(btnVolver);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(button3);
@@ -104,5 +127,7 @@
         private Button button2;
         private Button button1;
         private Label label1;
+        private Button btnVolver;
+        private Button button4;
     }
 }

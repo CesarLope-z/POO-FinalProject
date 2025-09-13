@@ -16,5 +16,19 @@ namespace POO_Catedra
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GenerarCita generarCita = new GenerarCita();
+            generarCita.Show();
+            this.Hide();
+        }
+
+        private void btnVolverP_Click(object sender, EventArgs e)
+        {
+            Ingresar ingresar = new Ingresar("Paciente");
+            ingresar.Show();
+            this.Hide();
+        }
     }
 }

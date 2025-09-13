@@ -76,6 +76,7 @@
             button1.TabIndex = 4;
             button1.Text = "Ingresar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -85,6 +86,7 @@
             button2.TabIndex = 5;
             button2.Text = "Volver";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Ingresar
             // 

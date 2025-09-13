@@ -29,46 +29,28 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
             dataGridView1 = new DataGridView();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            button1 = new Button();
+            btnVolverP = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(509, 109);
+            label1.Location = new Point(503, 76);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(96, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(95, 159);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(112, 23);
-            comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(95, 258);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 2;
+            label1.Text = "Citas Registradas";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(407, 140);
+            dataGridView1.Location = new Point(381, 106);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(340, 241);
             dataGridView1.TabIndex = 3;
             // 
             // label2
@@ -80,35 +62,35 @@
             label2.TabIndex = 4;
             label2.Text = "Bienvenido, Paciente";
             // 
-            // label3
+            // button1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(95, 141);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 5;
-            label3.Text = "label3";
+            button1.Location = new Point(81, 106);
+            button1.Name = "button1";
+            button1.Size = new Size(175, 47);
+            button1.TabIndex = 5;
+            button1.Text = "Crear Cita Medica";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // label4
+            // btnVolverP
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(95, 240);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 6;
-            label4.Text = "label4";
+            btnVolverP.Location = new Point(81, 315);
+            btnVolverP.Name = "btnVolverP";
+            btnVolverP.Size = new Size(175, 32);
+            btnVolverP.TabIndex = 6;
+            btnVolverP.Text = "Cerrar Sesión";
+            btnVolverP.UseVisualStyleBackColor = true;
+            btnVolverP.Click += btnVolverP_Click;
             // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            ClientSize = new Size(733, 359);
+            Controls.Add(btnVolverP);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
             Controls.Add(label1);
             Name = "Inicio";
             Text = "Inicio";
@@ -120,11 +102,9 @@
         #endregion
 
         private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
         private DataGridView dataGridView1;
         private Label label2;
-        private Label label3;
-        private Label label4;
+        private Button button1;
+        private Button btnVolverP;
     }
 }

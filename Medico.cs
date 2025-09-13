@@ -21,5 +21,12 @@ namespace POO_Catedra
         {
 
         }
+
+        private void btnVolverM_Click(object sender, EventArgs e)
+        {
+            Ingresar ingresar = new Ingresar("Medico");
+            ingresar.Show();
+            this.Hide();
+        }
     }
 }
