@@ -27,6 +27,7 @@ namespace POO_Catedra
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //algun cambio
             Ingresar ingresar = new Ingresar();
             ingresar.Show();
             this.Hide();
