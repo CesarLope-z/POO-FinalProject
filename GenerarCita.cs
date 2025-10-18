@@ -19,9 +19,7 @@ namespace POO_Catedra
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
+            
         }
     }
 }

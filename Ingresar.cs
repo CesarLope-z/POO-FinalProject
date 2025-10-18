@@ -13,13 +13,11 @@ namespace POO_Catedra
 {
     public partial class Ingresar : Form
     {
-        string connectionString = @"Server=DESKTOP-VU9V0R8\MSSQLSERVERR;Database=GestionCitasMedicas;Trusted_Connection=True;";
+        string connectionString = @"Server=DESKTOP-1TN96GE;Database=GestionCitasMedicas;Trusted_Connection=True;";
 
-        private string tipo;
-        public Ingresar(string tipo)
+        public Ingresar()
         {
             InitializeComponent();
-            this.tipo = tipo;
         }
 
 
@@ -28,62 +26,42 @@ namespace POO_Catedra
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(1) FROM Usuario WHERE Username=@usuario AND Password=@contraseña AND Rol=@tipo";
+                string query = "SELECT ID_Rol, ID_Paciente, ID_Medico FROM Usuario WHERE Username=@usuario AND Password=@contraseña";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@usuario", textBox1.Text);
                 command.Parameters.AddWithValue("@contraseña", textBox2.Text);
-                command.Parameters.AddWithValue("@tipo", tipo);
-                int count = Convert.ToInt32(command.ExecuteScalar());
-                if (count == 1)
+
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    // Credenciales correctas
-                    if (tipo == "Paciente")
+                    if (reader.Read())
                     {
-                        Inicio inicio = new Inicio();
-                        inicio.Show();
-                        this.Hide();
-                    }
-                    else if (tipo == "Medico")
-                    {
-                        Medico medico = new Medico();
-                        medico.Show();
-                        this.Hide();
-                    }
-                    else if (tipo == "Administrador")
-                    {
-                        Administrador administrador = new Administrador();
-                        administrador.Show();
-                        this.Hide();
-                    }
-                }
-                else
-                {
-                    // Credenciales incorrectas
-                    if (textBox1.Text == "admin" && textBox2.Text == "admin")
-                    {
-                        if (tipo == "Paciente")
+                        int idRol = reader.GetInt32(0);
+
+                        if (idRol == 1) // Rol Paciente
                         {
-                            Inicio inicio = new Inicio();
+                            int idPersona = reader.GetInt32(1);
+                            Inicio inicio = new Inicio(idPersona);
                             inicio.Show();
                             this.Hide();
                         }
-                        else if (tipo == "Medico")
+                        else if (idRol == 2) // Rol Medico
                         {
-                            Medico medico = new Medico();
+                            int idPersona = reader.GetInt32(2);
+                            Medico medico = new Medico(idPersona);
                             medico.Show();
                             this.Hide();
                         }
-                        else if (tipo == "Administrador")
+                        else if (idRol == 3) // Rol administrador o secretario
                         {
-                            Administrador administrador = new Administrador();
-                            administrador.Show();
+                            
+                            Administrador admin = new Administrador();
+                            admin.Show();
                             this.Hide();
-
                         }
                     }
                     else
                     {
-                        //MessageBox.Show("Usuario o contraseña incorrectos");
+                        MessageBox.Show("Credenciales incorrectas. Inténtalo de nuevo.");
                     }
                 }
             }

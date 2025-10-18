@@ -12,9 +12,11 @@ namespace POO_Catedra
 {
     public partial class Medico : Form
     {
-        public Medico()
+        public int idMedico;
+        public Medico(int idMedico)
         {
             InitializeComponent();
+            this.idMedico = idMedico;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace POO_Catedra
 
         private void btnVolverM_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Medico");
+            Ingresar ingresar = new Ingresar();
             ingresar.Show();
             this.Hide();
         }

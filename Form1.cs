@@ -21,29 +21,30 @@ namespace POO_Catedra
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Paciente");
+            Ingresar ingresar = new Ingresar();
             ingresar.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Medico");
-            ingresar.Show();
-            this.Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Administrador");
-            ingresar.Show();
-            this.Hide();
+            //este boton ya no existe
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,7 +19,7 @@ namespace POO_Catedra
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar("Administrador");
+            Ingresar ingresar = new Ingresar();
             ingresar.Show();
             this.Hide();
         }
