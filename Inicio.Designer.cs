@@ -95,6 +95,7 @@
             Controls.Add(label1);
             Name = "Inicio";
             Text = "Inicio";
+            Load += Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

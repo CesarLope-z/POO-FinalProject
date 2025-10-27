@@ -78,6 +78,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(240, 23);
             comboBox1.TabIndex = 7;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -147,6 +148,7 @@
             button2.TabIndex = 18;
             button2.Text = "Crear cita";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label6
             // 
@@ -188,6 +190,7 @@
             Controls.Add(comboBox1);
             Name = "GenerarCita";
             Text = "GenerarCita";
+            Load += GenerarCita_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

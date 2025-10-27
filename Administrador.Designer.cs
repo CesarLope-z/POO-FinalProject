@@ -35,13 +35,15 @@
             label1 = new Label();
             btnVolver = new Button();
             button4 = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(321, 80);
+            dataGridView1.Location = new Point(321, 142);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(366, 265);
             dataGridView1.TabIndex = 8;
@@ -54,6 +56,7 @@
             button3.TabIndex = 7;
             button3.Text = "Eliminar Usuario";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -72,6 +75,7 @@
             button1.TabIndex = 5;
             button1.Text = "Crear Usuario";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -100,12 +104,32 @@
             button4.TabIndex = 11;
             button4.Text = "Administrar Cita Medica";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(524, 82);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(163, 23);
+            textBox1.TabIndex = 12;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(321, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 15);
+            label2.TabIndex = 13;
+            label2.Text = "Buscar Usuario";
             // 
             // Administrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
             Controls.Add(button4);
             Controls.Add(btnVolver);
             Controls.Add(label1);
@@ -115,6 +139,7 @@
             Controls.Add(button1);
             Name = "Administrador";
             Text = "Administrador";
+            Load += Administrador_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -129,5 +154,7 @@
         private Label label1;
         private Button btnVolver;
         private Button button4;
+        private TextBox textBox1;
+        private Label label2;
     }
 }

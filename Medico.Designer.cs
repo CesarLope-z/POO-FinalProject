@@ -53,17 +53,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(470, 80);
+            dataGridView1.Location = new Point(346, 80);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(364, 150);
             dataGridView1.TabIndex = 1;
             // 
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(470, 288);
+            dataGridView3.Location = new Point(346, 288);
             dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(240, 150);
+            dataGridView3.Size = new Size(364, 150);
             dataGridView3.TabIndex = 3;
             // 
             // label2
@@ -87,7 +87,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.MenuHighlight;
-            button1.Location = new Point(126, 174);
+            button1.Location = new Point(44, 174);
             button1.Name = "button1";
             button1.Size = new Size(211, 56);
             button1.TabIndex = 7;
@@ -97,7 +97,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.MenuHighlight;
-            button2.Location = new Point(126, 81);
+            button2.Location = new Point(44, 81);
             button2.Name = "button2";
             button2.Size = new Size(211, 56);
             button2.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             // btnVolverM
             // 
-            btnVolverM.Location = new Point(126, 406);
+            btnVolverM.Location = new Point(44, 406);
             btnVolverM.Name = "btnVolverM";
             btnVolverM.Size = new Size(211, 32);
             btnVolverM.TabIndex = 9;
@@ -129,6 +129,7 @@
             Controls.Add(label1);
             Name = "Medico";
             Text = "Medico";
+            Load += Medico_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
